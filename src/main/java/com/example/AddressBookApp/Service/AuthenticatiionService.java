@@ -1,3 +1,4 @@
+
 package com.example.AddressBookApp.Service;
 
 import com.example.AddressBookApp.DTO.AuthUserDTO;
@@ -44,7 +45,7 @@ public class AuthenticatiionService implements IAuthenticationService {
 
             emailSenderService.sendEmail(
                     user.getEmail(),
-                    "Registered in Greeting App",
+                    "Registered in AddressBook",
                     "Hi " + user.getFirstName() + ",\nYou have been successfully registered!\n\nYour registered details are:\n\n"
                             + "User Id: " + user.getUserId() + "\n"
                             + "First Name: " + user.getFirstName() + "\n"
@@ -73,7 +74,7 @@ public class AuthenticatiionService implements IAuthenticationService {
                     emailSenderService.sendEmail(
                             user.get().getEmail(),
                             "Logged in Successfully!",
-                            "Hi " + user.get().getFirstName() + ",\n\nYou have successfully logged in into Greeting App!");
+                            "Hi " + user.get().getFirstName() + ",\n\nYou have successfully logged in into AddressBook!");
 
                     return "Congratulations!! You have logged in successfully!";
                 } else {
