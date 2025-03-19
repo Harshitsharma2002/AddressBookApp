@@ -37,7 +37,7 @@ public class AuthenticatiionService implements IAuthenticationService {
         String token = tokenUtil.createToken(user.getUserId());
         authUserRepository.save(user);
 
-        emailSenderService.sendEmail(user.getEmail(), "Registered in Greeting App", "Hi "
+        emailSenderService.sendEmail(user.getEmail(), "Registered in AddressBook", "Hi "
                 + user.getFirstName() + ",\nYou have been successfully registered!\n\nYour registered details are:\n\n User Id:  "
                 + user.getUserId() + "\n First Name:  "
                 + user.getFirstName() + "\n Last Name:  "
@@ -55,7 +55,7 @@ public class AuthenticatiionService implements IAuthenticationService {
 
             if (passwordEncoder.matches(loginDTO.getPassword(), user.get().getPassword())) {
                 emailSenderService.sendEmail(user.get().getEmail(), "Logged in Successfully!", "Hi "
-                        + user.get().getFirstName() + ",\n\nYou have successfully logged in into Greeting App!");
+                        + user.get().getFirstName() + ",\n\nYou have successfully logged in into AddressBook!");
 
                 return "Congratulations!! You have logged in successfully!";
             } else {
