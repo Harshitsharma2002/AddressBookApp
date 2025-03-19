@@ -1,3 +1,4 @@
+
 package com.example.AddressBookApp.model;
 
 import com.example.AddressBookApp.DTO.AuthUserDTO;
